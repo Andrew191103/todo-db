@@ -1,0 +1,58 @@
+.profile-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .profile-content {
+    text-align: center;
+  }
+  
+  .profile-details, .overlay {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .edit-profile-btn, .sign-out-btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+
+    cursor: pointer;
+  }
+  
+  .profile-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .profile-edit-form input, .profile-edit-form button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+
+  .label-black {
+    color: black;
+  }
+  
+  .label-white {
+    color: white;
+  }
+  

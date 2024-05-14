@@ -1,0 +1,118 @@
+/* Form container */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0; /* Light gray background */
+  border-radius: 15px;
+  transition: 0.4s ease-in-out;
+}
+
+/* Success and error popups */
+.success-popup,
+.error-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-popup {
+  background-color: #28a745; /* Green background */
+}
+
+.error-popup {
+  background-color: #dc3545; /* Red background */
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Heading style */
+#heading {
+  text-align: center;
+  margin: 2em;
+  color: #333; /* Dark gray text color */
+  font-size: 1.5em; /* Larger font size */
+}
+
+/* Input field container */
+.field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 15px;
+  padding: 0.6em;
+  border: 1px solid #ccc; /* Light gray border */
+  outline: none;
+  color: #333; /* Dark gray text color */
+  background-color: #fff; /* White background */
+}
+
+/* Input field icon style */
+.input-icon {
+  height: 1.5em;
+  width: 1.5em;
+  fill: #666; /* Gray icon color */
+}
+
+/* Input field style */
+.input-field {
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #333; /* Dark gray text color */
+}
+
+/* Button styles */
+.btn {
+  padding: 0.5em 1.5em; /* Adjust button padding */
+  border-radius: 15px; /* Rounded corners */
+  border: none;
+  outline: none;
+  transition: 0.4s ease-in-out;
+  background-color: #252525; /* Dark gray background */
+  color: white; /* White text color */
+  cursor: pointer; /* Add cursor pointer */
+  position: relative; /* Added position relative */
+  overflow: hidden; /* Hide overflowing elements */
+}
+
+/* Button hover effect */
+.btn:hover {
+  background-color: #252525; /* Maintain background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Button hover effect */
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+  transition: transform 0.4s; /* Transition transform */
+  border-radius: 50%; /* Circle shape */
+  transform: translate(-50%, -50%) scale(0); /* Initial scale */
+}
+
+.btn:hover::before {
+  transform: translate(-50%, -50%) scale(3); /* Scale up on hover */
+}
