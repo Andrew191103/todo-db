@@ -1,0 +1,90 @@
+[debug] [2024-03-27T16:22:39.215Z] ----------------------------------------------------------------------
+[debug] [2024-03-27T16:22:39.217Z] Command:       /opt/homebrew/Cellar/node/21.4.0/bin/node /opt/homebrew/bin/firebase init
+[debug] [2024-03-27T16:22:39.218Z] CLI Version:   13.6.0
+[debug] [2024-03-27T16:22:39.218Z] Platform:      darwin
+[debug] [2024-03-27T16:22:39.218Z] Node Version:  v21.4.0
+[debug] [2024-03-27T16:22:39.218Z] Time:          Wed Mar 27 2024 23:22:39 GMT+0700 (Western Indonesia Time)
+[debug] [2024-03-27T16:22:39.218Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-27T16:22:39.219Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-03-27T16:22:39.273Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-27T16:22:39.273Z] > authorizing via signed-in user (andrewskenna@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/andrewsebastian/Downloads/To-Do List Andrew Sibuea
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[debug] [2024-03-27T16:22:39.993Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-03-27T16:22:39.993Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-03-27T16:23:29.171Z] Using project from CLI flag: to-do-list-e0aef
+[debug] [2024-03-27T16:23:29.171Z] > refreshing access token with scopes: []
+[debug] [2024-03-27T16:23:29.172Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-03-27T16:23:29.172Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-27T16:23:29.589Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-03-27T16:23:29.589Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-03-27T16:23:29.605Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-e0aef [none]
+[debug] [2024-03-27T16:23:29.978Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-e0aef 200
+[debug] [2024-03-27T16:23:29.978Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/to-do-list-e0aef {"projectId":"to-do-list-e0aef","projectNumber":"113907357190","displayName":"To Do List","name":"projects/to-do-list-e0aef","resources":{"hostingSite":"to-do-list-e0aef","realtimeDatabaseInstance":"to-do-list-e0aef-default-rtdb","storageBucket":"to-do-list-e0aef.appspot.com","locationId":"asia-southeast2"},"state":"ACTIVE","etag":"1_02fa603f-c938-42f7-858d-3778a0c531ab"}
+[info] i  Using project to-do-list-e0aef (To Do List) 
+[info] 
+=== Database Setup
+[info] i  database: ensuring required API firebasedatabase.googleapis.com is enabled... 
+[debug] [2024-03-27T16:23:29.986Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firebasedatabase.googleapis.com [none]
+[debug] [2024-03-27T16:23:29.986Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firebasedatabase.googleapis.com x-goog-quota-user=projects/to-do-list-e0aef
+[debug] [2024-03-27T16:23:31.682Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firebasedatabase.googleapis.com 200
+[debug] [2024-03-27T16:23:31.683Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firebasedatabase.googleapis.com [omitted]
+[info] ✔  database: required API firebasedatabase.googleapis.com is enabled 
+[info] 
+[debug] [2024-03-27T16:23:31.683Z] >>> [apiv2][query] GET https://firebasedatabase.googleapis.com/v1beta/projects/to-do-list-e0aef/locations/-/instances/to-do-list-e0aef-default-rtdb [none]
+[debug] [2024-03-27T16:23:33.420Z] <<< [apiv2][status] GET https://firebasedatabase.googleapis.com/v1beta/projects/to-do-list-e0aef/locations/-/instances/to-do-list-e0aef-default-rtdb 200
+[debug] [2024-03-27T16:23:33.420Z] <<< [apiv2][body] GET https://firebasedatabase.googleapis.com/v1beta/projects/to-do-list-e0aef/locations/-/instances/to-do-list-e0aef-default-rtdb {"name":"projects/113907357190/locations/asia-southeast1/instances/to-do-list-e0aef-default-rtdb","project":"projects/113907357190","databaseUrl":"https://to-do-list-e0aef-default-rtdb.asia-southeast1.firebasedatabase.app","type":"DEFAULT_DATABASE","state":"ACTIVE"}
+[info] 
+[info] Firebase Realtime Database Security Rules allow you to define how your data should be
+[info] structured and when your data can be read from and written to.
+[info] 
+[debug] [2024-03-27T16:23:33.422Z] >>> [apiv2][query] GET https://to-do-list-e0aef-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [none]
+[debug] [2024-03-27T16:23:34.862Z] <<< [apiv2][status] GET https://to-do-list-e0aef-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json 200
+[debug] [2024-03-27T16:23:34.863Z] <<< [apiv2][body] GET https://to-do-list-e0aef-default-rtdb.asia-southeast1.firebasedatabase.app/.settings/rules.json [stream]
+[info] ✔  Database Rules for to-do-list-e0aef-default-rtdb have been written to database.rules.json. 
+[info] Future modifications to database.rules.json will update Realtime Database Security Rules when you run
+[info] firebase deploy.
+[info] 
+=== Firestore Setup
+[debug] [2024-03-27T16:23:34.865Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firestore.googleapis.com [none]
+[debug] [2024-03-27T16:23:34.865Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firestore.googleapis.com x-goog-quota-user=projects/to-do-list-e0aef
+[debug] [2024-03-27T16:23:35.264Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firestore.googleapis.com 200
+[debug] [2024-03-27T16:23:35.264Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/to-do-list-e0aef/services/firestore.googleapis.com [omitted]
+[debug] [2024-03-27T16:23:35.264Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/to-do-list-e0aef/databases/(default) [none]
+[debug] [2024-03-27T16:23:35.588Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/to-do-list-e0aef/databases/(default) 200
+[debug] [2024-03-27T16:23:35.588Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/to-do-list-e0aef/databases/(default) {"name":"projects/to-do-list-e0aef/databases/(default)","uid":"3dce80ed-8967-4ab8-853b-b63565321438","createTime":"2024-03-19T09:34:33.965618Z","updateTime":"2024-03-19T09:34:33.965618Z","locationId":"asia-southeast2","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-03-27T15:23:35.838607Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"zet","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"IL+z5qDtlIUDMJ7RtaSDgIUD"}
+[debug] [2024-03-27T16:23:35.588Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-03-27T16:23:35.588Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-27T16:23:35.588Z] > authorizing via signed-in user (andrewskenna@gmail.com)
+[debug] [2024-03-27T16:23:35.588Z] [iam] checking project to-do-list-e0aef for permissions ["firebase.projects.get"]
+[debug] [2024-03-27T16:23:35.588Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-e0aef:testIamPermissions [none]
+[debug] [2024-03-27T16:23:35.588Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-e0aef:testIamPermissions x-goog-quota-user=projects/to-do-list-e0aef
+[debug] [2024-03-27T16:23:35.588Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-e0aef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-27T16:23:36.822Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-e0aef:testIamPermissions 200
+[debug] [2024-03-27T16:23:36.822Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/to-do-list-e0aef:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
